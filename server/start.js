@@ -3,7 +3,9 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const {resolve} = require('path')
-
+const model = require('../db/models');
+const Student = model.Student;
+const Campus = model.Campus;
 const app = express()
 
 if (process.env.NODE_ENV !== 'production') {
@@ -37,7 +39,26 @@ if (module === require.main) {
   const PORT = 1337
 
   const db = require('../db')
-  db.sync()
+  db.sync({force:true})
+  .then(() => {
+    Promise.all([
+      Student.create({
+        name: 'Bobby',
+        email: 'bobbyv@gmail.com'
+      }),
+      Campus.create({
+        name:'Sports University'
+      }),
+      Campus.create({
+        name:'Music University'
+      }),
+      Student.create({
+        name: 'Jimmy',
+        email: 'jimmyv@aol.com',
+        campusId: 1    
+      })
+    ])
+  })
   .then(() => {
     console.log('db synced')
     app.listen(PORT, () => console.log(`server listening on port ${PORT}`))
