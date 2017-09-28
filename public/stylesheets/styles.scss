@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.col {
+	margin-left: 1%;
+}
+
+@for $i from 2 through 11 {
+	.span#{$i} {
+		$x : 12/$i;
+        width: ((100-$x+1)/$x)*1%;
+        float: left;
+	}
+}
+
+.span12 {
+    width:100%;
+    float: left;
+}
+body {
+    padding: 0;
+    margin:0;
+    font-family: 'Lato', sans-serif;    
+}
+#main {
+    background-image:url('https://wallpapercave.com/wp/agLijth.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-height: 100vh;
+    .ctaCont {
+        text-align: center;
+        .cta {
+            display: inline-block;
+            width:150px;
+            margin:8px 12px 0;
+            border:2px solid #003a65;
+            a {
+                display: block;
+                padding:12px 0;
+                transition: all .075s linear;
+                color:white;
+                text-decoration: none;
+                &:hover {
+                    background-color: #003a65;
+                    transition: all .075s linear;
+                }
+            }
+        }
+    }
+    .wrapper {
+        max-width: 1300px;
+        height: 100%;
+        position: relative;
+        margin:0 auto;
+    }
+    .nav {
+        text-align: center;
+        padding:2em 0;
+        a {
+            color:white;
+            font-size:18px;
+            padding:0 24px;
+        }
+    }
+    .home {
+        position: absolute;
+        top:50%;
+        transform:translate(-50%,-50%);
+        padding:24px 14px;
+        width:70%;
+        left:50%;
+        background-color: transparentize(#960088, .45);
+        border:2px solid white;
+        h1 {
+            color:white;
+            text-align: center
+        }
+        p {
+            color:white;
+            text-align: center;
+        }
+    }
+    .addCampus {
+        input {
+            width: 33%;
+            height: 30px;
+            margin-right: 14px;
+            margin-bottom: 2em;
+        }
+        button {
+            height: 30px;
+            color:white;
+            background-color: black;
+            &:disabled {
+                background-color: lightgrey;
+                color:darkgrey;
+            }
+        }
+    }
+    .allCampuses {
+        @extend .span12;
+        a:nth-child(3n+1){
+            .campus {
+                margin-left:0;
+            }
+        }
+        .campus {
+            @extend .span4;
+            text-align: center;
+            padding: 14px 0;
+            margin-bottom:2em;
+            background-color:transparentize(#009085, .45);
+            transition: all .075s linear;            
+            &:hover {
+                background-color: #009085;
+                transition: all .075s linear;
+            }
+            a {
+                text-decoration: none;
+            }
+            h4 {
+                color:white;
+                font-size:24px;
+                text-align: center;
+            }
+            h5 {
+                color:white;
+            }
+            &:nth-child(2), &:nth-child(3) {
+                margin-left:1%;
+            }
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .cta {
+                border:2px solid red;
+                p {
+                    color:red;
+                    padding:12px 0;
+                    margin:0;
+                    transition: all .075s linear;                    
+                    &:hover {
+                        background-color: red;
+                        cursor: pointer;
+                        color:white;
+                        transition: all .075s linear;                        
+                    }
+                }
+            }
+        }
+    }
+}

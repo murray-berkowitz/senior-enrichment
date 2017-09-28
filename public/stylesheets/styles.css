@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+.col {
+  margin-left: 1%; }
+
+.span2 {
+  width: 15.8333333333%;
+  float: left; }
+
+.span3 {
+  width: 24.25%;
+  float: left; }
+
+.span4, #main .allCampuses .campus {
+  width: 32.6666666667%;
+  float: left; }
+
+.span5 {
+  width: 41.0833333333%;
+  float: left; }
+
+.span6 {
+  width: 49.5%;
+  float: left; }
+
+.span7 {
+  width: 57.9166666667%;
+  float: left; }
+
+.span8 {
+  width: 66.3333333333%;
+  float: left; }
+
+.span9 {
+  width: 74.75%;
+  float: left; }
+
+.span10 {
+  width: 83.1666666667%;
+  float: left; }
+
+.span11 {
+  width: 91.5833333333%;
+  float: left; }
+
+.span12, #main .allCampuses {
+  width: 100%;
+  float: left; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif; }
+
+#main {
+  background-image: url("https://wallpapercave.com/wp/agLijth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 100vh; }
+  #main .ctaCont {
+    text-align: center; }
+    #main .ctaCont .cta {
+      display: inline-block;
+      width: 150px;
+      margin: 8px 12px 0;
+      border: 2px solid #003a65; }
+      #main .ctaCont .cta a {
+        display: block;
+        padding: 12px 0;
+        transition: all .075s linear;
+        color: white;
+        text-decoration: none; }
+        #main .ctaCont .cta a:hover {
+          background-color: #003a65;
+          transition: all .075s linear; }
+  #main .wrapper {
+    max-width: 1300px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto; }
+  #main .nav {
+    text-align: center;
+    padding: 2em 0; }
+    #main .nav a {
+      color: white;
+      font-size: 18px;
+      padding: 0 24px; }
+  #main .home {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px 14px;
+    width: 70%;
+    left: 50%;
+    background-color: rgba(150, 0, 136, 0.55);
+    border: 2px solid white; }
+    #main .home h1 {
+      color: white;
+      text-align: center; }
+    #main .home p {
+      color: white;
+      text-align: center; }
+  #main .addCampus input {
+    width: 33%;
+    height: 30px;
+    margin-right: 14px;
+    margin-bottom: 2em; }
+  #main .addCampus button {
+    height: 30px;
+    color: white;
+    background-color: black; }
+    #main .addCampus button:disabled {
+      background-color: lightgrey;
+      color: darkgrey; }
+  #main .allCampuses a:nth-child(3n+1) .campus {
+    margin-left: 0; }
+  #main .allCampuses .campus {
+    text-align: center;
+    padding: 14px 0;
+    margin-bottom: 2em;
+    background-color: rgba(0, 144, 133, 0.55);
+    transition: all .075s linear; }
+    #main .allCampuses .campus:hover {
+      background-color: #009085;
+      transition: all .075s linear; }
+    #main .allCampuses .campus a {
+      text-decoration: none; }
+    #main .allCampuses .campus h4 {
+      color: white;
+      font-size: 24px;
+      text-align: center; }
+    #main .allCampuses .campus h5 {
+      color: white; }
+    #main .allCampuses .campus:nth-child(2), #main .allCampuses .campus:nth-child(3) {
+      margin-left: 1%; }
+    #main .allCampuses .campus img {
+      max-width: 100%;
+      max-height: 100%; }
+    #main .allCampuses .campus .cta {
+      border: 2px solid red; }
+      #main .allCampuses .campus .cta p {
+        color: red;
+        padding: 12px 0;
+        margin: 0;
+        transition: all .075s linear; }
+        #main .allCampuses .campus .cta p:hover {
+          background-color: red;
+          cursor: pointer;
+          color: white;
+          transition: all .075s linear; }
+
+/*# sourceMappingURL=styles.css.map */

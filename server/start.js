@@ -47,10 +47,12 @@ if (module === require.main) {
         email: 'bobbyv@gmail.com'
       }),
       Campus.create({
-        name:'Sports University'
+        name:'Planet Sadala',
+        image: "https://vignette2.wikia.nocookie.net/dragonball/images/9/98/Planet_Sadala.png/revision/latest?cb=20170524161111"
       }),
       Campus.create({
-        name:'Music University'
+        name:'Planet Namek',
+        image:"https://vignette3.wikia.nocookie.net/dragonball/images/b/ba/New_Namek.png/revision/latest?cb=20110222232744"
       }),
       Student.create({
         name: 'Jimmy',
